@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app">
+      <button class="button_1">조명1 켜기</button>
+    </div>
+    <script type="module">
+      import "./style.css";
+
+      document.querySelector(".button_1").addEventListener("click", () => {
+        fetch(import.meta.env.VITE_FLASH_LIGHT_FIRST);
+      })
+    </script>
+  </body>
+</html>
